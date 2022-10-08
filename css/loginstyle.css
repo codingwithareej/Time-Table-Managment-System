@@ -69,6 +69,10 @@ section{
 	letter-spacing: 1px;
 	cursor:pointer;
 }
+ .box .form .inputbx input[type="submit"]:hover{
+	border-color: aliceblue;
+	 
+	 }
 .remember{
 	position:relative;
 	display:inline-block;
