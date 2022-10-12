@@ -23,21 +23,17 @@
   /*CSS OF HEADER*/
 header nav{
     position:fixed;
-    background: #000;
+    background: #3B3C36;
     height:75px;
     width:100%;
   }
   
-header nav .logo p{
-    color:#fff;
-    font-weight:700;
-    font-size: 20px;
-	letter-spacing:2px;
-    padding-top: 25px;
-    padding-left: 30px;
-    text-transform: capitalize;
-    cursor:pointer;
-  }
+  header nav .logo img{
+    width:100px;
+   height:auto;
+    margin-left:30px;
+  
+}
   header nav ul{
     display:flex;
     padding-top: 25px;
@@ -167,7 +163,7 @@ section .section3 .box .card a:hover{
 
 /*CSS OF FOTTER*/
 footer {
- background: #000;
+ background: #3B3C36;
     color:#fff;
     text-align: center;
     justify-content: center;
