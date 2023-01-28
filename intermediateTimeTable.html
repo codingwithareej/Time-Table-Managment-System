@@ -2,22 +2,31 @@
 <html>
   <head>
     <title>Inter TimeTable</title>
-    <link type="text/css" rel="stylesheet" href="css\dashboard.css" />
+    <link rel="shortcut icon" type="image/png" href="image/favicon.png" />
+    <!--Bootstrap-->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
     />
+    <!-- main CSS-->
+    <link type="text/css" rel="stylesheet" href="css\dashboard.css" />
   </head>
   <body>
     <!-- header of the page-->
     <header>
-      <nav>
+      <nav class="navbar navbar-expand-lg bg-dark py-1 fixed-top">
         <div class="logo fl">
           <img src="image/logo.png" alt="logo" type="image/png" />
         </div>
-        <ul class="fr">
-          <li><a href="login.html">Logout</a></li>
-        </ul>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="index.html">Back</a></li>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <!-- section of the page-->
@@ -26,17 +35,17 @@
       <div class="section1">
         <div class="box">
           <!--section1 CARD 1 -->
-          <div class="card bor">
-            <a href="dashBoardTeacher.html">Dashboard</a>
+          <div class="cards bor">
+            <a href="dashBoardStudent.html">Dashboard</a>
           </div>
           <!--section1 CARD 2 -->
-          <div class="card bor">
-            <a href="masterTimeTable.html">Master TimeTable</a>
+          <div class="cards bor">
+            <a href="bsTimeTable.html">BS TimeTable</a>
             <!--section1 CARD 2 SUBMENU-->
             <div class="subMenu">
               <div class="subCard bor">
                 <p>
-                  <a href="#">1st Semester</a>
+                  <a href="php/bsSemester_I.php">1st Semester</a>
                 </p>
               </div>
               <div class="subCard bor">
@@ -46,7 +55,7 @@
               </div>
               <div class="subCard bor">
                 <p>
-                  <a href="#">3rd Semester</a>
+                  <a href="php/bsSemester_III.php">3rd Semester</a>
                 </p>
               </div>
               <div class="subCard bor">
@@ -55,7 +64,7 @@
                 </p>
               </div>
               <div class="subCard bor">
-                <p><a href="#">5th Semester</a></p>
+                <p><a href="php/bsSemester_V.php">5th Semester</a></p>
               </div>
               <div class="subCard bor">
                 <p>
@@ -64,7 +73,7 @@
               </div>
               <div class="subCard bor">
                 <p>
-                  <a href="#">7th Semester</a>
+                  <a href="php/bsSemester_VII.php">7th Semester</a>
                 </p>
               </div>
               <div class="subCard bor">
@@ -75,45 +84,51 @@
             </div>
           </div>
           <!--section1 CARD 3 -->
-          <div class="card bor">
-            <a href="interTimeTable.html"><p>Inter TimeTable</p></a>
+          <div class="cards bor">
+            <a href="intermediateTimeTable.html"
+              >Intermediate TimeTable</a
+            >
             <!--section1 CARD 3 SUBMENU-->
             <div class="subMenu">
               <div class="subCard bor">
                 <p>
-                  <a href="#">1st Year</a>
+                  <a href="php/intermediatepart_I.php">1st Year</a>
                 </p>
               </div>
               <div class="subCard bor">
                 <p>
-                  <a href="#">2nd Year</a>
+                  <a href="php/intermediatepart_II.php">2nd Year</a>
                 </p>
               </div>
             </div>
           </div>
           <!--section1 CARD 4 -->
-          <div class="card bor">
-            <a href="examTimeTable.html">Exam TimeTable</a>
+          <div class="cards bor">
+            <a href="studentExamTimeTable.html">Exam TimeTable</a>
           </div>
         </div>
       </div>
 
       <!--section 2-->
       <div class="section2">
-        <h2 class="heading">Inter TimeTable</h2>
+        <h2 class="heading">Intertermediate TimeTable</h2>
         <div class="box">
-          <div class="card1 bor fl">
+          <div class="cards bor fl">
             <p>1st Year</p>
             <hr class="hrstyle" />
             <div>
-              <p class="p1"><a href="#">View Detail</a></p>
+              <p class="p1">
+                <a href="php/intermediatepart_I.php">View Detail</a>
+              </p>
             </div>
           </div>
-          <div class="card1 bor fl">
+          <div class="cards bor fl">
             <p>2nd Year</p>
             <hr class="hrstyle" />
             <div>
-              <p class="p1"><a href="#">View Detail</a></p>
+              <p class="p1">
+                <a href="php/intermediatepart_II.php">View Detail</a>
+              </p>
             </div>
           </div>
         </div>
@@ -121,10 +136,10 @@
     </section>
 
     <!--FOOTER-->
-    <footer>
-      <p>
+    <footer class="bg-dark text-light text-center p-3">
+      <p class="pt-3">
         ALL Right Reserved.&copy;2022 &nbsp;<strong>Design By :</strong>
-        Students of Govt Post Graduate(W) Whadat Colony ,LHR.
+        Students of Govt Graduate Collage(W) Whadat Colony ,LHR.
       </p>
     </footer>
   </body>

@@ -8,23 +8,21 @@
 	box-sizing: border-box;
 	font-family:'poppins',sans-serif;
     }
+	body{
+		background:  #5D8AA8;
+	}
 section{
 	display:flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background:  #5D8AA8;
 }
 .box{
-	position: relative;
 	padding: 50px;
 	width:360px;
-	height:480px;
-	display:flex;
+	height:380px;
 	justify-content: center;
 	align-items: center;
-	background: #F8F8FF;
-	border-radius: 6px;
 	box-shadow:6px 6px rgba(0,0,0);
 	}
 .box .form{
@@ -32,7 +30,6 @@ section{
 	width:100%;
 }
 .box .form h2{
-	color:#000;
 	font-weight:700;
 	letter-spacing:2px;
 	margin-bottom:30px;
@@ -43,7 +40,6 @@ section{
 	margin-bottom:20px;
 }
 .box .form .inputbx .span{
-	color:#000;
 	font-weight:700;
 	font-size:18px;
 
@@ -54,8 +50,6 @@ section{
 	border:1px solid rgba(0,0,0,0.2);
 	background:transparent;
 	padding:8px 10px;
-	border-radius:6px;
-	color:#000;
 	font-size:16px;
 	font-weight:300;
 }

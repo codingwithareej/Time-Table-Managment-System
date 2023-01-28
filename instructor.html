@@ -2,93 +2,113 @@
 <html>
   <head>
     <title>Instructors</title>
-
-    <!--<link type="text/css" rel="stylesheet" href="css\dashboard.css" />-->
-    <link type="text/css" rel="stylesheet" href="css\adminDashboard.css" />
+    <link rel="shortcut icon" type="image/png" href="image/favicon.png" />
+    <!--Bootstrap-->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
     />
+    <!-- main CSS-->
+    <link type="text/css" rel="stylesheet" href="css\adminDashboard.css" />
   </head>
   <body>
     <!-- header of the page-->
     <header>
-      <nav>
+      <nav class="navbar navbar-expand-lg bg-dark py-1 fixed-top">
         <div class="logo fl">
           <img src="image/logo.png" alt="logo" type="image/png" />
         </div>
-        <ul class="fr">
-          <li><a href="login.html">Logout</a></li>
-        </ul>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="php/logout.php">Logout</a></li>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <!-- section of the page-->
     <section>
-      <!--section 2-->
+      <!--section 1-->
       <div class="section1">
         <div class="box">
           <!--section1 CARD 1 -->
-          <div class="card bor">
+          <div class="cards bor">
             <a href="dashboardAdmin.html">Dashboard</a>
           </div>
           <!--section1 CARD 2 -->
-          <div class="card bor">
+          <div class="cards bor">
             <a href="instructor.html">Instructors</a>
           </div>
           <!--section1 CARD 3 -->
-          <div class="card bor">
-            <a href="#"><p>Department</p></a>
+          <div class="cards bor">
+            <a href="department.html">Department</a>
           </div>
           <!--section1 CARD 4 -->
-          <div class="card bor">
-            <a href="#"><p>Course</p></a>
+          <div class="cards bor">
+            <a href="course.html">Course</a>
           </div>
           <!--section1 CARD 5 -->
-          <div class="card bor">
+          <div class="cards bor">
             <a href="timeTable.html">TimeTable</a>
           </div>
         </div>
       </div>
       <!--section 2-->
       <div class="section2">
+        <div class="link">
+          <a href="php/viewInstructor.php" class="text-dark m-3">View Detail</a>
+          <a href="php/updateInstructor.php" class="text-dark m-3"
+            >Update Detail</a
+          >
+        </div>
         <h2 class="heading">Instructors</h2>
         <div class="box">
           <div class="form">
-            <form>
+            <form action="php/instructor.php" method="POST">
               <div class="inputbx">
-                <span class="span">First Name</span>
+                <span class="span">Email</span>
                 <input
-                  type="text"
-                  placeholder="Enter Firstname Here"
+                  type="email"
+                  name="email"
+                  placeholder="Enter Email Here"
                   required
+                  style="margin-left: 50px"
                 />
               </div>
               <div class="inputbx">
-                <span class="span">Last Name</span>
-                <input type="text" placeholder="Enter Lastname Here" required />
+                <span class="span">User Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter Instructor Name Here"
+                  required
+                  style="margin-left: 3px"
+                />
+              </div>
+              <div class="inputbx">
+                <span class="span">password</span>
+                <input
+                  type="text"
+                  name="pass"
+                  placeholder="Enter Password Here"
+                  required
+                  style="margin-left: 15px"
+                />
               </div>
               <div class="inputbx">
                 <span class="span">Department</span>
                 <input
                   type="text"
+                  name="deptName"
                   placeholder="Enter Department Here"
                   required
                 />
               </div>
               <div class="inputbx">
-                <span class="span">Email</span>
-                <input type="email" placeholder="Enter Email Here" required />
-              </div>
-              <div class="inputbx">
-                <span class="span">Password</span>
-                <input
-                  type="password"
-                  placeholder="Enter Password Here"
-                  required
-                />
-              </div>
-              <div class="inputbx">
-                <input type="submit" value="Add" />
+                <input type="submit" name="submit" value="Add" />
               </div>
             </form>
           </div>
@@ -96,10 +116,10 @@
       </div>
     </section>
     <!--FOOTER-->
-    <footer>
-      <p>
+    <footer class="bg-dark text-light text-center p-3">
+      <p class="pt-3">
         ALL Right Reserved.&copy;2022 &nbsp;<strong>Design By :</strong>
-        Students of Govt Post Graduate(W) Whadat Colony ,LHR.
+        Students of Govt Graduate Collage(W) Whadat Colony ,LHR.
       </p>
     </footer>
   </body>

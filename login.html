@@ -2,30 +2,47 @@
 <html lang="en">
   <head>
     <title>Login page</title>
+    <link rel="shortcut icon" type="image/png" href="image/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
       integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9"
       crossorigin="anonymous"
     />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!--External CSS-->
     <link href="css/loginstyle.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-    <section>
-      <div class="box">
+    <section class="mh-100">
+      <div class="box text-justify-center rounded bg-light h-100 p-5">
         <div class="form">
-          <h2>Login</h2>
-          <form>
+          <div class="h2 text-dark">Login</div>
+          <form action="php/login.php" method="POST">
             <div class="inputbx">
-              <span class="span">User name</span>
-              <input type="text" placeholder="Enter Username Here" required />
+              <span class="span text-dark">Username</span>
+              <input
+                type="text"
+                name="username"
+                placeholder="Enter username Here"
+                required
+                class="rounded text-dark"
+              />
             </div>
             <div class="inputbx">
-              <span class="span">Password</span>
+              <span class="span text-dark">Password</span>
               <input
                 type="password"
+                name="password"
                 placeholder="Enter Password Here"
                 required
+                class="rounded text-dark"
               />
             </div>
             <label class="remember"
