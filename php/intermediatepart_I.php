@@ -19,7 +19,7 @@ $pdf->SetTextColor(0,0,0);
 
 $pdf->Cell(40,10,"Timming","1","0","C");
 $pdf->Cell(40,10,"Friday Timming","1","0","C");
-$pdf->Cell(35,10,"Teacher Name","1","0","C");
+$pdf->Cell(40,10,"Teacher Name","1","0","C");
 $pdf->Cell(30,10,"Subject Name","1","0","C");
 $pdf->Cell(20,10,"Room no","1","1","C");
 $pdf->SetFont('Arial','B',10);
@@ -31,7 +31,7 @@ while($row = $result->fetch_object()){
   $subject_name= $row->subject_name;
   $pdf->Cell(40,10,$Timming,"1","0","C");
   $pdf->Cell(40,10,$friTimming,"1","0","C");
-  $pdf->Cell(35,10,$name,"1","0","C");
+  $pdf->Cell(40,10,$name,"1","0","C");
   $pdf->Cell(30,10,$subject_name,"1","0","C");
   $pdf->Cell(20,10,$room_no,"1","0","C");
   $pdf->Ln();
@@ -50,7 +50,7 @@ $pdf->SetTextColor(0,0,0);
 
 $pdf->Cell(40,10,"Timming","1","0","C");
 $pdf->Cell(40,10,"Friday Timming","1","0","C");
-$pdf->Cell(35,10,"Teacher Name","1","0","C");
+$pdf->Cell(40,10,"Teacher Name","1","0","C");
 $pdf->Cell(30,10,"Subject Name","1","0","C");
 $pdf->Cell(20,10,"Room no","1","1","C");
 $pdf->SetFont('Arial','B',10);
@@ -62,7 +62,7 @@ while($row = $result->fetch_object()){
   $subject_name= $row->subject_name;
   $pdf->Cell(40,10,$Timming,"1","0","C");
   $pdf->Cell(40,10,$friTimming,"1","0","C");
-  $pdf->Cell(35,10,$name,"1","0","C");
+  $pdf->Cell(40,10,$name,"1","0","C");
   $pdf->Cell(30,10,$subject_name,"1","0","C");
   $pdf->Cell(20,10,$room_no,"1","0","C");
   $pdf->Ln();
