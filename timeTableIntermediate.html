@@ -63,51 +63,89 @@
             >View Detail</a
           >
           <a href="php/updateTimeIntermediate.php" class="text-dark m-3"
-            >Update Detail</a
+            >Update/Delete Detail</a
           >
         </div>
         <h2 class="heading">Intermediate Timetable</h2>
         <div class="box">
           <div class="form">
-            <form action="php/timeTableIntermediate.php" method="POST">
+            <form action="php/timeTableIntermediate.php" method="POST" style="margin-top:-50px ;">
               <div class="inputbx">
-                <span class="span">Time id</span>
-                <input
-                  type="text"
-                  name="id"
-                  required
-                  style="margin-left: 4.6em"
-                />
+                <span class="span">Period</span>
+                <select
+                name="id"
+                style="
+                width:13.5em;
+                 margin-left:5.2em;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">Choose Period</option>
+                <option value="p1_inter">Lecture 1</option>
+                <option value="p2_inter">Lecture 2</option>
+                <option value="p3_inter">Lecture 3</option>
+                <option value="p4_inter">Lecture 4</option>
+                <option value="p5_inter">Lecture 5</option>
+                <option value="p6_inter">Lecture 6</option> 
+              </select>
               </div>
               <div class="inputbx">
                 <span class="span">Class</span>
-                <input
-                  type="text"
-                  name="class"
-                  required
-                  style="margin-left: 5.5em"
-                />
+                <select
+                name="class"
+                style="
+                width:13.5em;
+                 margin-left:5.8em;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">Choose Class</option>
+                <option value="ICS">ICS</option>
+                <option value="FSC PRE-ENGINEERING">FSC PRE-ENGINEERING</option>
+                <option value="FSC PRE-MEDICAL">FSC PRE-MEDICAL</option>
+              </select>
               </div>
               <div class="inputbx">
-                <span class="span">Subject id</span>
-                <input
-                  type="text"
-                  name="subjectid"
-                  required
-                  style="margin-left: 3.2em"
-                />
+                <span class="span">Subject name</span>
+                <select
+                name="subjectname"
+                style="
+                width:13.5em;
+                 margin-left:1.5em;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">Choose Subject</option>
+                <option value="URDU">URDU</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="ISLAMIAT">ISLAMIAT</option>
+                <option value="PAK STUDY">PAK STUDY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="COMPUTER SCIENCE">COMPUTER SCIENCE</option>
+              </select> 
               </div>
               <div class="inputbx">
                 <span class="span">Part</span>
                 <select
                   name="part"
                   style="
+                  width:13.5em;
                     margin-left: 6.5em;
-                    padding: 8px 35px;
+                    padding: 8px 5px;
                     border-radius: 6px;
+                    background-color: transparent;
                   "
                 >
-                  <option value="">choose from here</option>
+                  <option value="" style="text-align: center;">Choose Part</option>
                   <option value="part-I">part-I</option>
                   <option value="part-II">part-II</option>
                 </select>
@@ -122,6 +160,7 @@
                 <input
                   type="text"
                   name="room_no"
+                  placeholder="select from 1-45"
                   required
                   style="margin-left: 3.7em"
                 />

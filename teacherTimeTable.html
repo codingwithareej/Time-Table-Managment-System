@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <!-- main CSS-->
-    <link type="text/css" rel="stylesheet" href="css\contactExamStyle.css" />
+    <link type="text/css" rel="stylesheet" href="css\dashboard.css" />
     <link
       rel="stylesheet"
       href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
@@ -24,15 +24,6 @@
         <div class="logo fl">
           <img src="image/logo.png" alt="logo" type="image/png" />
         </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navmenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -44,14 +35,53 @@
     </header>
     <!-- section of the page-->
     <section>
-      <div class="heading">
-        <h2>Exam Are not Schedule yet</h2>
+      <!--section 1-->
+      <div class="section1">
+        <div class="box">
+          <!--section1 CARD 1 -->
+          <div class="cards bor">
+            <a href="dashBoardTeacher.html">Dashboard</a>
+          </div>
+          <!--section1 CARD 2 -->
+          <div class="cards bor">
+            <a href="php/teacher.php">Personal TimeTable</a>
+          </div>
+
+          <!--section1 CARD 3 -->
+          <div class="cards bor">
+            <a href="teacherTimeTable.html">TimeTable</a>
+          </div>
+        </div>
+      </div>
+      <!--section 2-->
+      <div class="section2">
+        <h2 class="heading">Timetable</h2>
+        <div class="box">
+          <div class="cards bor fl">
+            <p>BS Timetable</p>
+            <hr class="hrstyle" />
+            <div>
+              <p class="p1">
+                <a href="php/bsViewTimetable.php">View Detail</a>
+              </p>
+            </div>
+          </div>
+          <div class="cards bor fl">
+            <p>Intermediate Timetable</p>
+            <hr class="hrstyle" />
+            <div>
+              <p class="p1">
+                <a href="php/intermediateViewTimetable.php">View Detail</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- footer of the page-->
     <footer>
-      <div class="bg-dark text-light text-center p-3 mt-5">
+      <div class="bg-dark text-light text-center p-3">
         <p class="pt-3">
           ALL Right Reserved.&copy;2022 &nbsp;<strong>Design By :</strong>
           Students of Govt Graduate Collage(W) Whadat Colony ,LHR.

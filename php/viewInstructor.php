@@ -16,21 +16,18 @@ $pdf->SetFont('Arial','B',12);
 $pdf->SetTextColor(0,0,0);
 $pdf->Cell(180,20,"Instructor Detail","0","1","C");
 //table column
-//$pdf->SetLeftMargin(20);
+$pdf->SetLeftMargin(20);
 $pdf->SetTextColor(0,0,0);
-$pdf->Cell(20,10,"id","1","0","C");
 $pdf->Cell(40,10,"Teacher Name","1","0","C");
 $pdf->Cell(55,10,"Email","1","0","C");
 $pdf->Cell(35,10,"Password","1","0","C");
 $pdf->Cell(40,10,"Department","1","1","C");
 $pdf->SetFont('Arial','B',10);
 while($row = $result->fetch_object()){
-    $id=$row->id;
   $Teacher_Name= $row->username;
   $Email= $row->email;
   $Password= $row->password;
   $Department= $row->department;
- $pdf->Cell(20,10,$id,"1","0","C");
   $pdf->Cell(40,10, $Teacher_Name,"1","0","C");
   $pdf->Cell(55,10,$Email,"1","0","C");
   $pdf->Cell(35,10,$Password,"1","0","C");

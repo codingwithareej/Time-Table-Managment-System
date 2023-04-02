@@ -3,7 +3,7 @@ include 'connection.php';
 //varaible
 $id=$_POST['id'];
 $class=$_POST['class'];
-$subjectid=$_POST['subjectid'];
+$subjectname=$_POST['subjectname'];
 $part=$_POST['part'];
 $name=$_POST['name']; 
 $room_no=$_POST['room_no'];
@@ -16,7 +16,7 @@ if($num){
 echo" <script type=text/javascript>alert('room is already occupied by some other class in the same time slot CHANGE room no or time slot')</script>";
 }
 else{
-$reg="insert into timetable_intermediate(`id`, `class`, `subject_id`, `part`, `teacher_name`, `room_no`) VALUES ('$id','$class','$subjectid','$part','$name','$room_no')";
+$reg="insert into timetable_intermediate(`id`, `class`, `subject_name`, `part`, `teacher_name`, `room_no`) VALUES ('$id','$class','$subjectname','$part','$name','$room_no')";
 mysqli_query($con,$reg);
 echo" <script type=text/javascript>alert('data enter Succesfully')</script>";
 }

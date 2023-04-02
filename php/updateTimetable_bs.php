@@ -26,7 +26,6 @@
 <table>
 <thead>
 <tr>
-<th>id</th>
 <th>Timing</th>
 <th>FRi Timing</th>
 <th>Department name</th>
@@ -41,15 +40,13 @@
 <tbody>
 <?Php
 include 'connection.php';
-$s="select `s_id`,starting_time ,ending_time ,fri_starting_time,fri_ending_time,`department_name`,`semester`,`Course_code`, `teacher_name`,`day`,`room_no` FROM `timetable_bs` t1 INNER JOIN timetable t2 on t1.id=t2.id
-ORDER BY t1.id";
+$s="select `s_id`,starting_time ,ending_time ,fri_starting_time,fri_ending_time,`department_name`,`semester`,`Course_code`, `teacher_name`,`day`,`room_no` FROM `timetable_bs` t1 INNER JOIN timetable t2 on t1.id=t2.id";
 $query=mysqli_query($con,$s);
 $nums=mysqli_num_rows($query);
 
 while($res=mysqli_fetch_array($query)){
 ?>
 <tr>
-<td><?php echo $res['s_id'];  ?></td> 
 <td><?php echo $res['starting_time'].'-'. $res['ending_time'];?></td>
 <td><?php echo $res['fri_starting_time'].'-'. $res['fri_ending_time']; ?></td>
 <td><?php echo $res['department_name'];  ?></td>

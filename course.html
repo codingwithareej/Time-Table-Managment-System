@@ -23,15 +23,16 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-light" href="php/logout.php">Logout</a></li>i>
+              <a class="nav-link text-light" href="php/logout.php">Logout</a></li>
             </li>
           </ul>
         </div>
       </nav>
+      
     </header>
     <!-- section of the page-->
     <section>
-      <!--section 1-->
+      <!--section 2-->
       <div class="section1">
         <div class="box">
           <!--section1 CARD 1 -->
@@ -58,23 +59,85 @@
       </div>
       <!--section 2-->
       <div class="section2">
-        <h2 class="heading">Course</h2>
+        <div class="link">
+          <a href="php/viewCourseDetail.php" class="text-dark m-3"
+            >View Detail</a
+          >
+          <a href="php/updateCourseDetail.php" class="text-dark m-3"
+            >Update/Delete Detail</a
+          >
+        </div>
+        <h2 class="heading">BS Course</h2>
         <div class="box">
-          <div class="cards bor fl">
-            <p>BS course</p>
-            <hr class="hrstyle" />
-            <div>
-              <p class="p1"><a href="courseBs.html">View Detail</a></p>
-            </div>
-          </div>
-          <div class="cards bor fl">
-            <p>Intermediate Subjects</p>
-            <hr class="hrstyle" />
-            <div>
-              <p class="p1">
-                <a href="intermediateSubject.html">View Detail</a>
-              </p>
-            </div>
+          <div class="form">
+            <form action="php/courseBs.php" method="POST">
+              <div class="inputbx">
+                <span class="span">Course id</span>
+                <input
+                  type="text"
+                  name="Courseid"
+                  placeholder="c_sem1_1"
+                  required
+                  style="margin-left: 26px;width:17em"
+                />
+              </div>
+              <div class="inputbx">
+                <span class="span">Course Title</span>
+                <input
+                  type="text"
+                  name="Coursename"
+                  required
+                  style="margin-left: 6px;width:17em"
+                />
+              </div>
+              <div class="inputbx">
+                <span class="span">Course Code</span>
+                <input type="text" name="Coursecode" required style="width:17em" />
+              </div>
+              <div class="inputbx">
+                <span class="span">Department</span>
+                <select
+                name="bs"
+                style="
+                 margin-left: 12px;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">choose department</option>
+                <option value="BSIT">BSIT</option>
+                <option value="BS ENGLISH">BS ENGLISH</option>
+                <option value="BS MATHEMATICS">BS MATHEMATICS</option>
+                <option value="BS PHYSICS">BS PHYSICS</option>
+                <option value="BS APPLIED PSYCHOLOGY">BS APPLIED PSYCHOLOGY</option>
+                <option value="BS HEALTH & PHY EDUCATION">BS HEALTH & PHY EDUCATION</option>
+                <option value="BS ECONOMICS">BS ECONOMICS</option>
+                <option value="BS COMMERCE">BS COMMERCE</option>
+              </select>
+                  <select
+                    name="sem"
+                    style="
+                      padding: 8px 35px;
+                      border-radius: 6px;
+                      background-color: transparent;
+                    "
+                  >
+                    <option value="">choose semester</option>
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                    <option value="VI">VI</option>
+                    <option value="VII">VII</option>
+                    <option value="VIII">VIII</option>
+                  </select>
+              </div>
+              <div class="inputbx">
+                <input type="submit" value="Add" required />
+              </div>
+            </form>
           </div>
         </div>
       </div>

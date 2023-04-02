@@ -44,31 +44,31 @@ echo" <script type=text/javascript>alert('data updation is not Succesfull')</scr
 ?>
               <div class="inputbx">
                 <span class="span"> ID</span>
-                <input type="text" name="id" value="<?php echo $arrdata['id']?>" required style="margin-left:35px;"/>
+                <input type="text" name="id" value="<?php echo $arrdata['id']?>" required style="margin-left:7.7em;"/>
               </div>
               <div class="inputbx">
                 <span class="span">Department Name</span>
-                <input type="text" name="bs" value="<?php echo $arrdata['department_name'];?>" placeholder="Bs" required style="margin-left:11px;" />
+                <input type="text" name="bs" value="<?php echo $arrdata['department_name'];?>" placeholder="Bs" required />
               </div>
               <div class="inputbx">
                 <span class="span">Semester</span>
-                <input type="text" name="sem" value="<?php echo $arrdata['semester'];?>" required style="margin-left:15px;" />
+                <input type="text" name="sem" value="<?php echo $arrdata['semester'];?>" required style="margin-left:4.5em;" />
               </div>
               <div class="inputbx">
                 <span class="span">Course Code</span>
-                <input type="text"  name="CourseCode" value="<?php echo $arrdata['Course_code'];?>" required style="margin-left:21px;"/>
+                <input type="text"  name="CourseCode" value="<?php echo $arrdata['Course_code'];?>" required style="margin-left:2.5em;"/>
               </div>
               <div class="inputbx">
                 <span class="span">Teacher Name</span>
-                <input type="text"  name="name" value="<?php echo $arrdata['teacher_name'];?>" required style="margin-left:45px;"/>
+                <input type="text"  name="name" value="<?php echo $arrdata['teacher_name'];?>" required style="margin-left:30px;"/>
               </div>
               <div class="inputbx">
                 <span class="span">Days</span>
-                <input type="text"  name="day" value="<?php echo $arrdata['day'];?>" required style="margin-left:45px;"/>
+                <input type="text"  name="day" value="<?php echo $arrdata['day'];?>" required style="margin-left:6.2em;"/>
               </div>
               <div class="inputbx">
                 <span class="span">Room</span>
-                <input type="text"  name="room" value="<?php echo $arrdata['room_no'];?>" required style="margin-left:45px;"/>
+                <input type="text"  name="room" value="<?php echo $arrdata['room_no'];?>" required style="margin-left:5.8em;"/>
               </div>
               <div class="inputbx">
                 <input type="submit" value="Update" name='submit'required style="margin-left:10em;"/>

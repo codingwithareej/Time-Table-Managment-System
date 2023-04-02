@@ -6,7 +6,7 @@ if($con->connect_error){
   die("Error in DB connection: ".$conn->connect_errno." : ".$conn->connect_error);    
 }
 // Select data from MySQL database
-$sql = "select subject_name ,starting_time ,ending_time ,fri_starting_time,fri_ending_time ,room_no , teacher_name from timetable_intermediate t1 INNER JOIN intermediate_subject t2 on t1.subject_id=t2.subject_id INNER JOIN timetable t3 on t1.id=t3.id WHERE t1.class='ICS' AND t1.part='part-II'";
+$sql = "select subject_name ,starting_time ,ending_time ,fri_starting_time,fri_ending_time ,room_no , teacher_name from timetable_intermediate t1  INNER JOIN timetable t2 on t1.id=t2.id WHERE t1.class='ICS' AND t1.part='part-II'";
 $result = mysqli_query($con, $sql);
 
 $pdf = new FPDF();
@@ -20,8 +20,8 @@ $pdf->SetTextColor(0,0,0);
 
 $pdf->Cell(40,10,"Timming","1","0","C");
 $pdf->Cell(40,10,"Friday Timming","1","0","C");
-$pdf->Cell(35,10,"Teacher Name","1","0","C");
-$pdf->Cell(30,10,"Subject Name","1","0","C");
+$pdf->Cell(40,10,"Teacher Name","1","0","C");
+$pdf->Cell(40,10,"Subject Name","1","0","C");
 $pdf->Cell(20,10,"Room no","1","1","C");
 $pdf->SetFont('Arial','B',10);
 while($row = $result->fetch_object()){
@@ -32,14 +32,14 @@ while($row = $result->fetch_object()){
   $subject_name= $row->subject_name;
   $pdf->Cell(40,10,$Timming,"1","0","C");
   $pdf->Cell(40,10,$friTimming,"1","0","C");
-  $pdf->Cell(35,10,$name,"1","0","C");
-  $pdf->Cell(30,10,$subject_name,"1","0","C");
+  $pdf->Cell(40,10,$name,"1","0","C");
+  $pdf->Cell(40,10,$subject_name,"1","0","C");
   $pdf->Cell(20,10,$room_no,"1","0","C");
   $pdf->Ln();
 }
 
 //FSC pre-Engeneering
-$sql = "select subject_name ,starting_time ,ending_time ,fri_starting_time,fri_ending_time ,room_no , teacher_name from timetable_intermediate t1 INNER JOIN intermediate_subject t2 on t1.subject_id=t2.subject_id INNER JOIN timetable t3 on t1.id=t3.id WHERE t1.class='FSC pre-engineering' AND t1.part='part-II'";
+$sql = "select subject_name ,starting_time ,ending_time ,fri_starting_time,fri_ending_time ,room_no , teacher_name from timetable_intermediate t1  INNER JOIN timetable t2 on t1.id=t2.id WHERE t1.class='FSC pre-engineering' AND t1.part='part-II'";
 $result = mysqli_query($con, $sql);
 
 $pdf->SetFont('Arial','B',12);
@@ -51,8 +51,8 @@ $pdf->SetTextColor(0,0,0);
 
 $pdf->Cell(40,10,"Timming","1","0","C");
 $pdf->Cell(40,10,"Friday Timming","1","0","C");
-$pdf->Cell(35,10,"Teacher Name","1","0","C");
-$pdf->Cell(30,10,"Subject Name","1","0","C");
+$pdf->Cell(40,10,"Teacher Name","1","0","C");
+$pdf->Cell(40,10,"Subject Name","1","0","C");
 $pdf->Cell(20,10,"Room no","1","1","C");
 $pdf->SetFont('Arial','B',10);
 while($row = $result->fetch_object()){
@@ -63,8 +63,8 @@ while($row = $result->fetch_object()){
   $subject_name= $row->subject_name;
   $pdf->Cell(40,10,$Timming,"1","0","C");
   $pdf->Cell(40,10,$friTimming,"1","0","C");
-  $pdf->Cell(35,10,$name,"1","0","C");
-  $pdf->Cell(30,10,$subject_name,"1","0","C");
+  $pdf->Cell(40,10,$name,"1","0","C");
+  $pdf->Cell(40,10,$subject_name,"1","0","C");
   $pdf->Cell(20,10,$room_no,"1","0","C");
   $pdf->Ln();
 }

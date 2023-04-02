@@ -64,32 +64,73 @@ crossorigin="anonymous"
             >View Detail</a
           >
           <a href="php/bsUpdateTimetable.php" class="text-dark m-3"
-            >Update Detail</a
+            >Update/Delete Detail</a
           >
         </div>
         <h2 class="heading">BS Timetable</h2>
         <div class="box">
           <div class="form">
-            <form action="php/timeTableBs.php" method="POST">
+            <form action="php/timeTableBs.php" method="POST" style="margin-top:-50px ;">
               <div class="inputbx">
-                <span class="span">Time id</span>
-                <input
-                  type="text"
-                  name="id"
-                  required
-                  style="margin-left: 4.8em"
-                />
+                <span class="span">Period</span>
+                <select
+                name="id"
+                style="
+                width:17em;
+                 margin-left:5.2em;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">choose period</option>
+                <option value="p1_bs">Lecture 1</option>
+                <option value="p2_bs">Lecture 2</option>
+                <option value="p3_bs">Lecture 3</option>
+                <option value="p4_bs">Lecture 4</option>
+                <option value="p5_bs">Lecture 5</option>
+                <option value="p6_bs">Lecture 6</option>
+              </select>
               </div>
               <div class="inputbx">
                 <span class="span">Department</span>
-                <input
-                  type="text"
-                  name="bs"
-                  placeholder="Bs"
-                  required
-                  style="margin-left: 2.3em"
-                />
-                <input type="text" name="sem" placeholder="Sem" required />
+                <select
+                name="bs"
+                style="
+                 margin-left:2.4em;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">choose department</option>
+                <option value="BSIT">BSIT</option>
+                <option value="BS ENGLISH">BS ENGLISH</option>
+                <option value="BS MATHEMATICS">BS MATHEMATICS</option>
+                <option value="BS PHYSICS">BS PHYSICS</option>
+                <option value="BS APPLIED PSYCHOLOGY">BS APPLIED PSYCHOLOGY</option>
+                <option value="BS HEALTH & PHY EDUCATION">BS HEALTH & PHY EDUCATION</option>
+                <option value="BS ECONOMICS">BS ECONOMICS</option>
+                <option value="BS COMMERCE">BS COMMERCE</option>
+              </select>
+                  <select
+                    name="sem"
+                    style="
+                      padding: 8px 35px;
+                      border-radius: 6px;
+                      background-color: transparent;
+                    "
+                  >
+                    <option value="">choose semester</option>
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                    <option value="VI">VI</option>
+                    <option value="VII">VII</option>
+                    <option value="VIII">VIII</option>
+                  </select>
               </div>
               <div class="inputbx">
                 <span class="span">Course Code</span>
@@ -97,20 +138,21 @@ crossorigin="anonymous"
                   type="text"
                   name="Coursecode"
                   required
-                  style="margin-left: 1.5em"
+                  style="margin-left: 1.5em;width:17em"
                 />
               </div>
               <div class="inputbx">
                 <span class="span">Instructor Name</span>
-                <input type="text" name="name" required />
+                <input type="text" name="name" required style="width:17em"/>
               </div>
               <div class="inputbx">
                 <span class="span">Days</span>
                 <input
                   type="text"
                   name="days"
+                  placeholder="select 1-3,4-6"
                   required
-                  style="margin-left: 5.9em"
+                  style="margin-left: 5.9em;width:17em"
                 />
               </div>
               <div class="inputbx">
@@ -118,8 +160,9 @@ crossorigin="anonymous"
                 <input
                   type="text"
                   name="room"
+                  placeholder="select from 1-45"
                   required
-                  style="margin-left: 3.5em"
+                  style="margin-left: 3.5em;width:17em"
                 />
               </div>
               <div class="inputbx">

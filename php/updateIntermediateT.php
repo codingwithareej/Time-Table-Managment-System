@@ -27,13 +27,13 @@ $idupdate=$_GET['id'];
 //varaible
 $id=$_POST['id'];
 $class=$_POST['class'];
-$subjectid=$_POST['subjectid'];
+$subjectName=$_POST['subjectName'];
 $part=$_POST['part'];
 $name=$_POST['name']; 
 $room_no=$_POST['room_no'];
 
 
-$query="UPDATE `timetable_intermediate` SET `id`='$id',`class`='$class',`subject_id`='$subjectid',`part`='$part',`teacher_name`='$name',`room_no`='$room_no' WHERE ids=$idupdate";
+$query="UPDATE `timetable_intermediate` SET `id`='$id',`class`='$class',`subject_name`='$subjectName',`part`='$part',`teacher_name`='$name',`room_no`='$room_no' WHERE ids=$idupdate";
 $res=mysqli_query($con,$query);
 if($res){
 echo" <script type=text/javascript>alert('data update Succesfully')</script>";
@@ -52,8 +52,8 @@ echo" <script type=text/javascript>alert('data updation is not Succesfull')</scr
                 <input type="text" name="class" value="<?php echo $arrdata['class'];?>" placeholder="Bs" required style="margin-left:4.1em;" />
               </div>
               <div class="inputbx">
-                <span class="span">Subject Id</span>
-                <input type="text" name="subjectid" value="<?php echo $arrdata['subject_id'];?>" required style="margin-left:27px;" />
+                <span class="span">Subject Name</span>
+                <input type="text" name="subjectName" value="<?php echo $arrdata['subject_name'];?>" required  />
               </div>
               <div class="inputbx">
                 <span class="span">Part</span>

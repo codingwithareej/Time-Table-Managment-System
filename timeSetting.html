@@ -64,21 +64,39 @@
             >View Detail</a
           >
           <a href="php/updateTimeSchedule.php" class="text-dark m-3"
-            >Update Detail</a
+            >Update/Delete Detail</a
           >
         </div>
-        <h2 class="heading">Time Scheduling</h2>
+        <h2 class="heading">Lecture Scheduling</h2>
         <div class="box">
-          <div class="form">
+          <div class="form" style="margin-top:-45px ;">
             <form action="php/timeSetting.php" method="POST">
               <div class="inputbx">
-                <span class="span">Time id</span>
-                <input
-                  type="text"
-                  name="id"
-                  required
-                  style="margin-left: 6.7em"
-                />
+                <span class="span">Period</span>
+                <select
+                name="id"
+                style="
+                width:13.5em;
+                 margin-left:7.2em;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">choose period</option>
+                <option value="p1_bs">Lecture 1-BS</option>
+                <option value="p2_bs">Lecture 2-BS</option>
+                <option value="p3_bs">Lecture 3-BS</option>
+                <option value="p4_bs">Lecture 4-BS</option>
+                <option value="p5_bs">Lecture 5-BS</option>
+                <option value="p6_bs">Lecture 6-BS</option>
+                <option value="p1_inter">Lecture 1-Inter</option>
+                <option value="p2_inter">Lecture 2-Inter</option>
+                <option value="p3_inter">Lecture 3-Inter</option>
+                <option value="p4_inter">Lecture 4-Inter</option>
+                <option value="p5_inter">Lecture 5-Inter</option>
+                <option value="p6_inter">Lecture 6-Inter</option> 
+              </select>
               </div>
               <div class="inputbx">
                 <span class="span">Starting Time</span>
@@ -103,8 +121,8 @@
                 <input type="text" name="fri_start" required />
               </div>
               <div class="inputbx">
-                <span class="span">Friday Starting Time</span>
-                <input type="text" name="fri_end" required />
+                <span class="span">Friday Ending Time</span>
+                <input type="text" name="fri_end" required  style="margin-left:9px" />
               </div>
               <div class="inputbx">
                 <input type="submit" value="Add" required />

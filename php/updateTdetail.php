@@ -18,7 +18,7 @@
             <?php
 include 'connection.php';
 $idupdate=$_GET['ids'];
-$showquery="select * FROM `teacher_ttms`where id=$idupdate  ORDER BY `department_name`";
+$showquery="select * FROM `teacher_ttms` where id=$idupdate  ORDER BY `department_name`";
 $showdata=mysqli_query($con,$showquery);
 $arrdata=mysqli_fetch_array($showdata);
 
@@ -28,7 +28,7 @@ $idupdate=$_GET['ids'];
 //varaible
 $Name=$_POST['name'];
 $departmentname=$_POST['deptname'];
-$query="UPDATE `teacher_ttms` SET `id`='',`teacher_name`='$Name',`department_name`='$departmentname' WHERE  `id`=$idupdate";
+$query="UPDATE `teacher_ttms` SET `teacher_name`='$Name',`department_name`='$departmentname' WHERE  `id`=$idupdate";
 $res=mysqli_query($con,$query);
 if($res){
 echo" <script type=text/javascript>alert('data update Succesfully')</script>";

@@ -39,7 +39,7 @@
 <tbody>
 <?Php
 include 'connection.php';
-$s="select ids,subject_name,class ,subject_name,part,starting_time ,ending_time ,fri_starting_time,fri_ending_time ,room_no , teacher_name from timetable_intermediate t1 INNER JOIN intermediate_subject t2 on t1.subject_id=t2.subject_id INNER JOIN timetable t3 on t1.id=t3.id";
+$s="select ids,class ,subject_name,part,starting_time ,ending_time ,fri_starting_time,fri_ending_time ,room_no , teacher_name from timetable_intermediate t1  INNER JOIN timetable t2 on t1.id=t2.id";
 $query=mysqli_query($con,$s);
 $nums=mysqli_num_rows($query);
 

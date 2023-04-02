@@ -216,6 +216,7 @@ section .section2 .box .cards .p1 a:hover{
         font-size:16px;
         font-weight:300;
     }
+    
     section .section2 .box .form .inputbx input[type="submit"]{
         background:  #5D8AA8;
         color:#111;
@@ -242,7 +243,6 @@ section .section2 .box .cards .p1 a:hover{
   }
   section .section2 .box .form .inputbx input[type="reset"]:hover{
     border-color: aliceblue;
-     
      }
   
   

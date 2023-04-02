@@ -10,6 +10,11 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
     <!-- main CSS-->
     <link type="text/css" rel="stylesheet" href="css\adminDashboard.css" />
   </head>
@@ -61,7 +66,7 @@
         <div class="link">
           <a href="php/viewInstructor.php" class="text-dark m-3">View Detail</a>
           <a href="php/updateInstructor.php" class="text-dark m-3"
-            >Update Detail</a
+            >Update/Delete Detail</a
           >
         </div>
         <h2 class="heading">Instructors</h2>
@@ -75,7 +80,7 @@
                   name="email"
                   placeholder="Enter Email Here"
                   required
-                  style="margin-left: 50px"
+                  style="margin-left: 50px;width:15.5em"
                 />
               </div>
               <div class="inputbx">
@@ -85,27 +90,46 @@
                   name="name"
                   placeholder="Enter Instructor Name Here"
                   required
-                  style="margin-left: 3px"
+                  style="margin-left: 3px;width:15.5em"
                 />
               </div>
               <div class="inputbx">
-                <span class="span">password</span>
+                <span class="span">Password</span>
                 <input
-                  type="text"
+                  type="password"
                   name="pass"
+                  id="password"
                   placeholder="Enter Password Here"
                   required
-                  style="margin-left: 15px"
+                  style="margin-left: 15px;width:15.5em"
                 />
+                <i class='fa fa-eye fa-1x' id='visibilityBtn' style="color:gray;
+                margin-left:-35px;
+                cursor:pointer;"></i>
               </div>
               <div class="inputbx">
                 <span class="span">Department</span>
-                <input
-                  type="text"
-                  name="deptName"
-                  placeholder="Enter Department Here"
-                  required
-                />
+                <select
+                name="deptName"
+                style="
+                 margin-left: 3px;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">choose department</option>
+                <option value="URDU">URDU</option>
+                <option value="ISLAMIAT">ISLAMIAT</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="COMMERCE">COMMERCE</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="COMPUTER SCIENCE">COMPUTER SCIENCE</option>
+                <option value="APPLIED PSYCHOLOGY">APPLIED PSYCHOLOGY</option>
+                <option value="HEALTH & PHY EDUCATION">HEALTH & PHY EDUCATION</option>
+              </select>
               </div>
               <div class="inputbx">
                 <input type="submit" name="submit" value="Add" />
@@ -122,5 +146,14 @@
         Students of Govt Graduate Collage(W) Whadat Colony ,LHR.
       </p>
     </footer>
+    <script>
+      const togglePassword = document.querySelector('#visibilityBtn');
+  const password = document.querySelector('#password');
+  togglePassword.addEventListener('click', function (e) {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+});
+    </script>
   </body>
 </html>

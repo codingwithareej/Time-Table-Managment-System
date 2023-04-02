@@ -64,7 +64,7 @@
           <div class="link">
             <a href="php/viewThDetail.php" class="text-dark m-3">View Detail</a>
             <a href="php/updateThDetail.php" class="text-dark m-3"
-              >Update Detail</a
+              >Update/Delete Detail</a
             >
           </div>
           <h2 class="heading">Instructor Details</h2>
@@ -72,19 +72,34 @@
             <form action="php/department.php" method="POST">
               <div class="inputbx">
                 <span class="span">Teacher Name</span>
-                <input type="text" name="name" required />
+                <input type="text" name="name" required style="width:15.5em" />
               </div>
               <div class="inputbx">
-                <span class="span">Dept-name</span>
-                <input
-                  type="text"
-                  name="deptname"
-                  required
-                  style="margin-left: 29px"
-                />
+                <span class="span">Department</span>
+                <select
+                name="deptname"
+                style="
+                 margin-left:1.5em;
+                  padding: 8px 5px;
+                  border-radius: 6px;
+                  background-color: transparent;
+                "
+              >
+                <option value="" style="text-align: center;">choose department</option>
+                <option value="URDU">URDU</option>
+                <option value="ISLAMIAT">ISLAMIAT</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="COMMERCE">COMMERCE</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="COMPUTER SCIENCE">COMPUTER SCIENCE</option>
+                <option value="APPLIED PSYCHOLOGY">APPLIED PSYCHOLOGY</option>
+                <option value="HEALTH & PHY EDUCATION">HEALTH & PHY EDUCATION</option>
+              </select>
               </div>
               <div class="inputbx">
-                <input type="submit" value="Save" required />
+                <input type="submit" value="Add" required />
               </div>
             </form>
           </div>
